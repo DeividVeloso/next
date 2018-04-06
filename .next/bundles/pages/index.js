@@ -1119,9 +1119,9 @@ var _jsxFileName = "/Users/dveloso/Desktop/tests/nextjs/pages/index.js";
 
 
 
-var Index = function Index() {
+var PostLink = function PostLink(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_2__components_MyLayout__["a" /* default */],
+    "li",
     {
       __source: {
         fileName: _jsxFileName,
@@ -1129,14 +1129,68 @@ var Index = function Index() {
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "p",
-      {
-        __source: {
+      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
+      { href: "/post?title=" + props.title, __source: {
           fileName: _jsxFileName,
           lineNumber: 7
         }
       },
-      "Hello Next.js"
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "a",
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8
+          }
+        },
+        props.title
+      )
+    )
+  );
+};
+
+var Index = function Index() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_2__components_MyLayout__["a" /* default */],
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "h1",
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      },
+      "My Blog"
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "ul",
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PostLink, { title: "Hello Next.js", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        }
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PostLink, { title: "Learn Next.js is awesome", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        }
+      }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(PostLink, { title: "Deploy apps with Zeit", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      })
     )
   );
 };
@@ -1154,6 +1208,7 @@ var _default = Index;
     return;
   }
 
+  reactHotLoader.register(PostLink, "PostLink", "/Users/dveloso/Desktop/tests/nextjs/pages/index.js");
   reactHotLoader.register(Index, "Index", "/Users/dveloso/Desktop/tests/nextjs/pages/index.js");
   reactHotLoader.register(_default, "default", "/Users/dveloso/Desktop/tests/nextjs/pages/index.js");
   leaveModule(module);
